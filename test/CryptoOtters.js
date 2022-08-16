@@ -4,10 +4,10 @@ const {
 } = require("@nomicfoundation/hardhat-network-helpers")
 const { expect } = require('chai')
 
-describe('Omniverse Contract', () => {
+describe('CryptoOtters Contract', () => {
   const deployContractFixture = async () => {
     const [wallet, walletTo] = await ethers.getSigners();
-    const Contract = await ethers.getContractFactory('CustomERC721A')
+    const Contract = await ethers.getContractFactory('CryptoOtters')
     const contract = await Contract.deploy();
 
     return { contract, wallet, walletTo }

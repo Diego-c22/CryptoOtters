@@ -106,3 +106,7 @@ dist
 .vscode/
 
 package-lock.json
+
+cache/
+
+artifacts/
