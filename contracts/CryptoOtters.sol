@@ -17,7 +17,7 @@ contract CryptoOtters is ERC721AUpgradeable, OwnableUpgradeable {
             name_: "CryptoOtters",
             symbol_: "CXO",
             pricePublicSale_: 0.052 ether,
-            pricePreSale_: 0.39 ether,
+            pricePreSale_: 0.039 ether,
             amountForPreSale_: 1500,
             amountForPublicSale_: 8500,
             amountForFreeSale_: 10000,
