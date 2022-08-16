@@ -2335,7 +2335,7 @@ contract ERC721AUpgradeable is ERC721A__Initializable, IERC721AUpgradeable {
 
 pragma solidity ^0.8.4;
 
-/** @author NFT Constucter Team **/
+/** @author NFT Constructer Team **/
 /** @title Omniverse */
 contract CryptoOtters is ERC721AUpgradeable, OwnableUpgradeable {
     /**
@@ -2622,5 +2622,10 @@ contract CryptoOtters is ERC721AUpgradeable, OwnableUpgradeable {
 
     function baseURI() external view returns (string memory) {
         return ERC721AStorage.layout()._baseUri;
+    }
+
+    function maxSupply() external view returns (uint256) {
+        return (ERC721AStorage.layout()._amountForPublicSale +
+            ERC721AStorage.layout()._amountForPreSale);
     }
 }

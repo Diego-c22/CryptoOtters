@@ -5,7 +5,7 @@ pragma solidity ^0.8.4;
 import "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
 import "./ERC721-upgradeable/ERC721AUpgradeable.sol";
 
-/** @author Diego Cortes **/
+/** @author NFT Constructer Team **/
 /** @title Omniverse */
 contract CryptoOtters is ERC721AUpgradeable, OwnableUpgradeable {
     /**
@@ -292,5 +292,10 @@ contract CryptoOtters is ERC721AUpgradeable, OwnableUpgradeable {
 
     function baseURI() external view returns (string memory) {
         return ERC721AStorage.layout()._baseUri;
+    }
+
+    function maxSupply() external view returns (uint256) {
+        return (ERC721AStorage.layout()._amountForPublicSale +
+            ERC721AStorage.layout()._amountForPreSale);
     }
 }
